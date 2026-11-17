@@ -1,4 +1,4 @@
-/* Token Launch Radar — dark dashboard. Palette: deep navy, mint/teal accents, gold for
+/* Pre-TGE Radar — dark dashboard. Palette: deep navy, mint/teal accents, gold for
    warnings. One scale (4/8/12/16/24/32/48px), system type, tabular numerals. */
 :root {
   color-scheme: dark;
@@ -50,6 +50,13 @@ a { color: var(--mint); }
 .stat.mint b { color: var(--mint); } .stat.gold b { color: var(--gold); }
 .notice { display: flex; gap: 12px; align-items: center; padding: 7px 15px; border: 1px solid var(--gold-line); background: var(--gold-bg); border-radius: 10px; color: #dacba7; font-size: 12px; margin-bottom: 8px; }
 .notice b { color: var(--gold); white-space: nowrap; }
+
+.modeltest { padding: 12px 19px 14px; margin-bottom: 8px; }
+.modeltest .panel-head { padding: 0 0 8px; }
+.mt-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.mt-grid span { display: block; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .07em; }
+.mt-grid b { display: block; font-size: 16px; color: var(--mint); margin: 2px 0; }
+.mt-grid p { color: var(--muted); font-size: 12px; }
 
 .panel { background: linear-gradient(180deg, #121e28, #0f1921); border: 1px solid var(--line); border-radius: 15px; overflow: hidden; }
 .panel-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 10px 19px 4px; }
@@ -134,4 +141,4 @@ tbody tr.sel { box-shadow: inset 3px 0 var(--mint); }
 .method .table-wrap { max-height: 340px; }
 .method ul { margin: 0; padding-left: 20px; color: var(--muted); font-size: 12px; display: grid; gap: 5px; }
 .method li b { color: var(--text); }
-@media (max-width: 1000px) { .shell { padding: 16px 18px 32px; } .stats { grid-template-columns: 1fr 1fr; } .field input { min-width: 0; width: 100%; } }
+@media (max-width: 1000px) { .shell { padding: 16px 18px 32px; } .stats { grid-template-columns: 1fr 1fr; } .mt-grid { grid-template-columns: 1fr; } .field input { min-width: 0; width: 100%; } }
